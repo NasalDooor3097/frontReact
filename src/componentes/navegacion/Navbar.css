@@ -1,0 +1,273 @@
+/* General Styles */
+a {
+  text-decoration: none;
+}
+li{
+  color: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", "sans-serif";
+  background: ghostwhite;
+}
+
+.navegacion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  background: ghostwhite;
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 2%;
+  height: auto;
+  max-width: 100%;
+  padding: 0 1.2%;
+}
+
+.navegacion li a {
+  text-decoration: none;
+  padding: 10px;
+  position: relative;
+}
+
+.color-b {
+  color: black;
+}
+
+.color-b:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.color-w {
+  color: white;
+}
+
+.color-w:hover {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.navegacion li a::after {
+  content: "";
+  background-color: darkgray;
+  position: absolute;
+  left: 0%;
+  top: calc(100% + 4px);
+  width: 100%;
+  height: 4px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.navegacion a:hover::after {
+  opacity: 0.8;
+}
+
+.navegacion li {
+  display: inline-block;
+  text-align: center;
+}
+
+#carrito-logo {
+  width: 40px;
+  max-height: 300px;
+}
+
+.nav-cart-cont {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -35px;
+  margin-left: -55px;
+  text-decoration: none;
+  border-radius: 11px;
+  font-size: 14px;
+  background: red;
+  color: white;
+}
+
+.carrito-logo {
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carrito-logo:hover {
+  transform: scale(1.13);
+  cursor: pointer;
+}
+
+.text-prducts {
+  color: black;
+  text-decoration: none;
+}
+
+.left {
+  margin-left: 2%;
+  flex: 2;
+}
+
+.center {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  margin-left: 2%;
+  gap: 17px;
+  max-width: 60%;
+  font-weight: 550;
+  font-size: 21px;
+}
+
+.right {
+  flex: 1;
+  margin-right: 3%;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-principal-2 {
+  justify-content: center;
+  background-color: black;
+  width: 150px;
+  height: auto;
+  text-align: center;
+  border-radius: 9px;
+  border: none;
+  font-weight: 600;
+  margin-top: 3%;
+  padding: 14px 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.button-principal-2:hover {
+  background-color: rgba(0, 0, 0, 0.789);
+  transform: scale(1.13);
+}
+
+.flex-align {
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 880px) {
+  .navegacion {
+    display: none;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid #fff;
+    padding: 10px;
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .left, .right, .center {
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 7px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .right {
+    gap: 17px;
+  }
+
+  .logo-img {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    margin-top: 4px;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 5px;
+    background-color: #333;
+    margin: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  .navbar.active .navegacion {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar.active + main {
+    margin-top: 230px;
+  }
+
+  .button-principal-2 {
+    background-color: black;
+    width: 100%;
+    text-align: left;
+    border: none;
+    padding: 12px 12px;
+    padding-left: 15px;
+    text-decoration: none;
+    color: white;
+  }
+
+  .button-principal-2:hover {
+    background-color: rgba(169, 169, 169, 0.186);
+    transform: scale(1.03);
+  }
+
+  .navegacion li a::after {
+    position: relative;
+  }
+
+  .carrito-logo {
+    margin-right: 0px;
+  }
+
+  .color-w {
+    color: rgb(255, 255, 255);
+  }
+}
+
+main {
+  width: 100%;
+  min-height: 600px;
+}
+
+iframe {
+  width: 100%;
+  min-height: 2000px;
+}
+
+.navegacion .logo-img {
+  width: 50px;
+  height: auto;
+  max-height: 60px;
+}
+
+#logo-img {
+  width: 200px;
+  height: 190px;
+}
