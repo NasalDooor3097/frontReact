@@ -26,7 +26,7 @@ const LoginAdmin = () => {
       setUser(response.data);
       console.log(setUser);
       if (response.data.length > 0) {
-        navigate("/");
+        navigate("/admin");
       } else {
         alert("No se encontro el Admin");
       }
